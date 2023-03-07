@@ -6,12 +6,14 @@ class CoreIcon extends StatelessWidget with CoreThemeDataMixin {
     super.key,
     required this.icon,
     required this.iconSize,
+    required this.semanticLabel,
     this.color = CoreColorType.primary,
   });
 
   const CoreIcon.small({
     super.key,
     required this.icon,
+    required this.semanticLabel,
     this.iconSize = CoreIconSizeType.small,
     this.color = CoreColorType.primary,
   });
@@ -19,6 +21,7 @@ class CoreIcon extends StatelessWidget with CoreThemeDataMixin {
   const CoreIcon.medium({
     super.key,
     required this.icon,
+    required this.semanticLabel,
     this.iconSize = CoreIconSizeType.medium,
     this.color = CoreColorType.primary,
   });
@@ -26,6 +29,7 @@ class CoreIcon extends StatelessWidget with CoreThemeDataMixin {
   final CoreColorType color;
   final CoreIconSizeType? iconSize;
   final IconData icon;
+  final String semanticLabel;
 
   double? _getThemedStyle(BuildContext context) {
     return Theme.of(context).extension<CoreIconSizeTheme>()!.values[iconSize];
@@ -35,6 +39,11 @@ class CoreIcon extends StatelessWidget with CoreThemeDataMixin {
   Widget build(BuildContext context) {
     final currentColor = getThemedColor(context, color);
     final iconSize = _getThemedStyle(context);
-    return Icon(icon, color: currentColor, size: iconSize);
+    return Icon(
+      icon,
+      color: currentColor,
+      size: iconSize,
+      semanticLabel: semanticLabel,
+    );
   }
 }

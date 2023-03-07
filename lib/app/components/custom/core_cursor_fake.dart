@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:concepta/theme/theme.dart';
 
 class CoreCursorFake extends StatelessWidget with CoreThemeDataMixin {
+  const CoreCursorFake({super.key});
+
   @override
   Widget build(BuildContext context) {
     final currentPrimaryColor = getThemedColor(context, CoreColorType.primary);

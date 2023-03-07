@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:concepta/theme/theme.dart';
 
 import '../layout/core_container.dart';
-import '../layout/core_typography.dart';
 
 class CoreLoading extends StatelessWidget with CoreThemeDataMixin {
   const CoreLoading({

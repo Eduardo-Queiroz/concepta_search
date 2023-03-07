@@ -17,7 +17,7 @@ class CoreWrapperConcepta extends StatelessWidget {
       children: <Widget>[
         Positioned(
           width: width,
-          top: height / 3,
+          top: height / 4,
           child: Column(
             children: children,
           ),

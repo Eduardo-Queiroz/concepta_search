@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'app/features/details/infra/routes/details.dart';
 import 'app/features/search/infra/routes/search.dart';
 import 'app/shared/router.dart';
+import 'infra/router/route_bundle.dart';
 import 'theme/theme.dart';
 
 class App extends StatefulWidget {
@@ -23,7 +24,9 @@ class AppState extends State<App> {
       title: 'Nike',
       theme: customTheme.theme,
       onGenerateRoute: (settings) {
-        return Routes.routeMap[settings.name]!.createRoute(settings);
+        return Routes.routeMap[settings.name]!.createRoute(
+          settings,
+        );
       },
       localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
         GlobalMaterialLocalizations.delegate,

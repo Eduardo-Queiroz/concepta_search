@@ -1,13 +1,14 @@
 import 'dart:async';
 
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'animation_state.dart';
 
 class SearchAnimationCubit extends Cubit<SearchAnimationState> {
-  SearchAnimationCubit() : super(InitialFrame());
+  SearchAnimationCubit({
+    SearchAnimationState? initialState,
+  }) : super(initialState ?? InitialFrame());
 
   Future<void> goToSmall() async {
     if (state.input.isEnable) {

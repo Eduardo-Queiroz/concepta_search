@@ -15,7 +15,7 @@ class CoreStaggeredList extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimationConfiguration.staggeredList(
       position: index,
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 450),
       child: SlideAnimation(
         verticalOffset: 3.0,
         child: FadeInAnimation(

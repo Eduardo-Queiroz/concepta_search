@@ -1,3 +1,9 @@
-import '../details_data_source.dart';
+import 'package:dartz/dartz.dart';
 
-abstract class DetailsRemoteDataSource implements DetailsDataSource {}
+import '../../../domain/entities/detail.dart';
+
+abstract class DetailsRemoteDataSource {
+  Future<Either<Exception, DetailEntity>> getInfoByName({
+    required String name,
+  });
+}

@@ -1,4 +1,3 @@
-// ignore_for_file: avoid_classes_with_only_static_members
 import 'package:concepta/app/features/details/presentation/screens/details_screen.dart';
 import 'package:concepta/app/features/search/presentation/bloc/suggestion/suggestion_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +32,7 @@ class Routes {
               ),
             ),
       ],
-      transitionType: CorePageTransitionType.fade,
+      transitionType: CorePageTransitionType.wave,
     ),
   };
 }

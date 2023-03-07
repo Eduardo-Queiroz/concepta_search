@@ -92,7 +92,10 @@ class _SearchInputState extends State<SearchInputComponent> {
                     child: AnimatedOpacity(
                       duration: CoreDelay().quick,
                       opacity: state.search.visibility ? 1 : 0,
-                      child: const CoreIcon.medium(icon: Icons.search),
+                      child: const CoreIcon.medium(
+                        icon: Icons.search,
+                        semanticLabel: "search",
+                      ),
                     ),
                   ),
                   AnimatedPositioned(

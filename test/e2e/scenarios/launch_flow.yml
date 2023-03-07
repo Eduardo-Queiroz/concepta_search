@@ -1,0 +1,6 @@
+appId: com.example.concepta
+---
+- launchApp:
+    appId: "com.example.concepta"
+    clearState: true
+    stopApp: false

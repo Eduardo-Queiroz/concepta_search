@@ -32,7 +32,9 @@ class SearchSuggestionCubit extends Cubit<SearchSuggestionState> {
   void inputValue(
     String inputValue,
   ) {
-    if (inputValue.length > 2) {
+    if (inputValue.length == 3) {
+      getSuggestion(query: inputValue);
+    } else if (inputValue.length > 3) {
       if (_debounce?.isActive ?? false) _debounce?.cancel();
       _debounce = Timer(const Duration(milliseconds: 300), () {
         getSuggestion(query: inputValue);

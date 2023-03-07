@@ -1,7 +1,20 @@
+import 'dart:io';
+
 class CoreDelay {
-  Duration get veryLong => const Duration(milliseconds: 900);
-  Duration get long => const Duration(milliseconds: 600);
-  Duration get easy => const Duration(milliseconds: 300);
-  Duration get quick => const Duration(milliseconds: 100);
-  Duration get fade => const Duration(milliseconds: 50);
+  final isTest = Platform.environment.containsKey('FLUTTER_TEST');
+  Duration get veryLong => isTest
+      ? const Duration(microseconds: 0)
+      : const Duration(milliseconds: 1000);
+  Duration get long => isTest
+      ? const Duration(microseconds: 0)
+      : const Duration(milliseconds: 600);
+  Duration get easy => isTest
+      ? const Duration(microseconds: 0)
+      : const Duration(milliseconds: 300);
+  Duration get quick => isTest
+      ? const Duration(microseconds: 0)
+      : const Duration(milliseconds: 150);
+  Duration get fade => isTest
+      ? const Duration(microseconds: 0)
+      : const Duration(milliseconds: 50);
 }

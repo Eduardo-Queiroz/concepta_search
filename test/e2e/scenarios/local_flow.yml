@@ -1,0 +1,29 @@
+appId: com.example.concepta
+---
+- runFlow: launch_flow.yml
+
+- waitForAnimationToEnd
+
+- tapOn: ".*search.*"
+- waitForAnimationToEnd
+
+- assertVisible: "No Recent Searchs"
+
+- inputText: "bloc"
+- waitForAnimationToEnd
+
+- assertVisible: "flutter_bloc"
+
+- tapOn: "flutter_bloc"
+- waitForAnimationToEnd
+
+- tapOn: ".*arrow back.*"
+- waitForAnimationToEnd
+
+- tapOn: ".*search.*"
+- waitForAnimationToEnd
+
+- tapOn: "flutter_bloc"
+- waitForAnimationToEnd
+
+- assertVisible: "flutter_bloc"

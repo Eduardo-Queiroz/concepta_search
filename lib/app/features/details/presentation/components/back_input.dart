@@ -9,6 +9,9 @@ class ButtonBackComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      customBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(100),
+      ),
       onTap: () {
         CoreNavigator.of(context).pop();
       },
@@ -19,6 +22,7 @@ class ButtonBackComponent extends StatelessWidget {
         ),
         child: CoreIcon.medium(
           icon: Icons.arrow_back,
+          semanticLabel: "arrow back",
         ),
       ),
     );

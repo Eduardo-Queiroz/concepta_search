@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 enum CorePageTransitionType {
   /// Fade Animation
   fade,
+
+  /// Right to left with fading animation
+  wave,
 }
 
 /// Page transition class compose for PageRouteBuilder
@@ -12,10 +15,10 @@ class CorePageTransition<T> {
     required this.type,
     this.context,
     this.inheritTheme = false,
-    this.curve = Curves.linear,
+    this.curve = Curves.ease,
     this.alignment,
-    this.duration = const Duration(milliseconds: 600),
-    this.reverseDuration = const Duration(milliseconds: 600),
+    this.duration = const Duration(milliseconds: 900),
+    this.reverseDuration = const Duration(milliseconds: 900),
     this.fullscreenDialog = false,
     this.opaque = false,
   });
@@ -57,18 +60,13 @@ class CorePageTransition<T> {
           animation,
           secondaryAnimation,
         ) =>
-            inheritTheme
-                ? InheritedTheme.captureAll(
-                    context!,
-                    child,
-                  )
-                : child,
+            child,
         transitionDuration: duration,
         reverseTransitionDuration: reverseDuration,
-        opaque: opaque,
-        fullscreenDialog: fullscreenDialog,
+        opaque: false,
+        barrierDismissible: false,
         transitionsBuilder: (
-          _,
+          context,
           animation,
           secondaryAnimation,
           child,
@@ -76,6 +74,26 @@ class CorePageTransition<T> {
           switch (type) {
             case CorePageTransitionType.fade:
               return FadeTransition(opacity: animation, child: child);
+
+            case CorePageTransitionType.wave:
+              {
+                var screenSize = MediaQuery.of(context).size;
+                Offset center =
+                    Offset(screenSize.width / 2, screenSize.height / 4 + 20);
+                double beginRadius = 0.0;
+                double endRadius = screenSize.height / 2;
+
+                Tween tween = Tween(begin: beginRadius, end: endRadius);
+                Animation radiusTweenAnimation = animation.drive(tween);
+
+                return ClipPath(
+                  clipper: CircleRevealClipper(
+                    radius: radiusTweenAnimation,
+                    center: center,
+                  ),
+                  child: child,
+                );
+              }
 
             default:
               return SlideTransition(
@@ -94,8 +112,28 @@ class CorePageTransition<T> {
                   ),
                 ),
               );
-              ;
           }
         },
       );
+}
+
+class CircleRevealClipper extends CustomClipper<Path> {
+  final Offset center;
+  final Animation radius;
+
+  CircleRevealClipper({
+    required this.center,
+    required this.radius,
+  });
+
+  @override
+  Path getClip(Size size) {
+    return Path()
+      ..addOval(Rect.fromCircle(radius: radius.value, center: center));
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
+  }
 }

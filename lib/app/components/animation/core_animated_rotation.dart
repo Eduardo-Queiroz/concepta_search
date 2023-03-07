@@ -1,7 +1,10 @@
+// ignore_for_file: library_private_types_in_public_api
+
 library animated_rotation;
 
 import 'dart:math' show pi;
 
+import 'package:concepta/infra/util/animation_constants.dart';
 import 'package:flutter/widgets.dart';
 
 /// Animated version of [Transform.rotate] which automatically transitions the
@@ -16,7 +19,7 @@ class CoreAnimatedRotation extends ImplicitlyAnimatedWidget {
     required this.angle,
     required this.child,
     super.curve = Curves.linear,
-    super.duration = const Duration(seconds: 1),
+    required super.duration,
   });
 
   /// The amount degrees to rotate the child clockwise.

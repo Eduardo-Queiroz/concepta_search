@@ -6,7 +6,6 @@ import 'core_recent_search_db.dart';
 
 class DataBaseType {
   static const int suggestion = 0;
-  static const int suggestionItem = 1;
 }
 
 Future<void> setupDB() async {

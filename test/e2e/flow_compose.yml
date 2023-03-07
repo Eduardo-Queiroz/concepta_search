@@ -1,0 +1,4 @@
+appId: com.example.concepta
+---
+- runFlow: scenarios/local_flow.yml
+- runFlow: scenarios/remote_flow.yml
