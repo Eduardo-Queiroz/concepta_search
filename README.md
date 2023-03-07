@@ -6,7 +6,7 @@ Challenge Concepta is a model application with fluid animations, popular archite
 
 ![](maestro_demo.gif)
 
-## Decicoes
+## Motivations
 
 I used patterns and libs that in my perception were most applicable to the demonstrated challenge that has multiple data sources and complex animations
 
@@ -17,7 +17,7 @@ I used patterns and libs that in my perception were most applicable to the demon
 | Hive          | Persistence solution with virtualization to speed up queries for small db.                                          |
 | get_it        | Solution to reduce coupling, facilitate the implementation of unit tests and generate dependency inversion.         |
 
-#### Testes
+#### Tests
 
 Even not having a wide variety of tests they provide great coverage of the code and ensuring quality.
 
@@ -26,11 +26,11 @@ Even not having a wide variety of tests they provide great coverage of the code 
 | E2E             | I use maestro for black box testing                                                           |
 | Widget (custom) | I use internal utilities to create tests that have high code coverage even with few scenarios |
 
-## Configurando o ambiente de desenvolvimento
+## Setting up the development environment
 
 Follow the steps in the link: https://docs.flutter.dev/get-started/install
 
-## Para começar
+## Get Start
 
 Install project dependencies
 
@@ -44,23 +44,23 @@ And run the command to start the application
 flutter run
 ```
 
-## Testes automatizados
+## Automated tests
 
-### Configurando o ambiente de testes e2e
+### Setting up the e2e test environment
 
 Follow the steps in the link: https://maestro.mobile.dev/getting-started/installing-maestro
 
-#### Testes e2e (maestro)
+#### E2E Tests (maestro)
 
-(e2e tests require an active emulator or simulator)
+(E2E tests require an active emulator or simulator)
 
-Run the command to run the e2e tests
+Run the command to run the E2E tests
 
 ```sh
 maestro test -c test/e2e/flow_compose.yml
 ```
 
-#### Testes de widget
+#### Widget Tests
 
 To run the widget tests run the command
 
