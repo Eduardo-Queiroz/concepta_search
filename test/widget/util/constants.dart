@@ -1,5 +1,5 @@
-const inputIncompleteText = '12';
-const inputCompleteText = '1234';
+const inputIncompleteText = '1';
+const inputCompleteText = '123';
 
 const remoteItemDataMocked = 'flutter_bloc';
 

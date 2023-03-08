@@ -5,6 +5,8 @@ import 'package:concepta/infra/util/animation_constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'suggestion_state.dart';
 
+const minTermLength = 2;
+
 class SearchSuggestionCubit extends Cubit<SearchSuggestionState> {
   SearchSuggestionCubit({
     required this.searchRepository,
@@ -30,9 +32,9 @@ class SearchSuggestionCubit extends Cubit<SearchSuggestionState> {
   }
 
   void inputValue(String inputValue) {
-    if (inputValue.length == 3) {
+    if (inputValue.length == minTermLength) {
       getSuggestion(query: inputValue);
-    } else if (inputValue.length > 3) {
+    } else if (inputValue.length > minTermLength) {
       if (_debounce?.isActive ?? false) _debounce?.cancel();
       _debounce = Timer(const Duration(milliseconds: 300), () {
         getSuggestion(query: inputValue);

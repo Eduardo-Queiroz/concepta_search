@@ -116,7 +116,7 @@ void main() {
     );
 
     testWidgets(
-      'should not update request after 2 letters',
+      'should not update request after 1 letter',
       (tester) async {
         //arrange
         await SearchSeeds().build(
