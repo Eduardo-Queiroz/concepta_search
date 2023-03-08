@@ -5,7 +5,7 @@ Challenge Concepta is a model application with fluid animations, popular archite
 ## Maestro Demo
 
 
-https://user-images.githubusercontent.com/37419591/223822296-bc096166-7079-4093-a887-b1f072ad7025.mov
+https://user-images.githubusercontent.com/37419591/223831752-5a771d5b-3416-4526-8a34-80bc29b6d14d.mov
 
 
 ## Motivations
