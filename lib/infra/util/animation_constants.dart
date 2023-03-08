@@ -7,7 +7,7 @@ class CoreDelay {
       : const Duration(milliseconds: 1000);
   Duration get long => isTest
       ? const Duration(microseconds: 0)
-      : const Duration(milliseconds: 600);
+      : const Duration(milliseconds: 500);
   Duration get easy => isTest
       ? const Duration(microseconds: 0)
       : const Duration(milliseconds: 300);

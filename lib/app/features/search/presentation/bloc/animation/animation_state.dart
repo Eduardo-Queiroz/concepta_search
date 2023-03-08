@@ -150,7 +150,7 @@ class GoToLargeFrame1 extends SearchAnimationState with EquatableMixin {
           search: SearchAnimations.hide(),
           cursor: CursorAnimations.asCursor(),
           input: InputAnimations.smallDisabled(),
-          duration: CoreDelay().easy,
+          duration: CoreDelay().long,
         );
 
   @override
