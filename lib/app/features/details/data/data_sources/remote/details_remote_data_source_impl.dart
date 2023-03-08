@@ -22,7 +22,7 @@ class DetailsRemoteDataSourceImpl implements DetailsRemoteDataSource {
         likes: (results.last as PackageScore).likeCount,
         points: (results.last as PackageScore).grantedPoints,
         popularity: (results.last as PackageScore).popularityScore,
-        details: (results.first as PubPackage).description,
+        description: (results.first as PubPackage).description,
       );
 
       return Right(data);

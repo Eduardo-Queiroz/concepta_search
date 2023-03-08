@@ -1,3 +1,4 @@
+export 'animation/core_shimmer_wrapper.dart';
 export 'animation/core_animated_rotation.dart';
 export 'animation/core_shimmer.dart';
 export 'custom/core_cursor_fake.dart';

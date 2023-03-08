@@ -7,28 +7,35 @@ class BannerDescriptionShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50,
-      width: 50,
-      child: CoreShimmer(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            CoreContainer(
-              margin: CoreSpacing(
-                bottom: CoreSpacingType.spacing50,
+    return CoreContainer(
+      margin: const CoreSpacing(
+        vertical: CoreSpacingType.spacing200,
+        left: CoreSpacingType.spacing200,
+        right: CoreSpacingType.spacing150,
+      ),
+      child: SizedBox(
+        height: 50,
+        width: 50,
+        child: CoreShimmer(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              CoreContainer(
+                margin: CoreSpacing(
+                  bottom: CoreSpacingType.spacing50,
+                ),
+                border: CoreBorderType.easy,
+                height: 12,
+                color: CoreColorType.primary,
               ),
-              border: CoreBorderType.easy,
-              height: 12,
-              color: CoreColorType.primary,
-            ),
-            CoreContainer(
-              width: 170,
-              border: CoreBorderType.easy,
-              height: 12,
-              color: CoreColorType.primary,
-            ),
-          ],
+              CoreContainer(
+                width: 170,
+                border: CoreBorderType.easy,
+                height: 12,
+                color: CoreColorType.primary,
+              ),
+            ],
+          ),
         ),
       ),
     );
