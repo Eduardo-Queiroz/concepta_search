@@ -5,16 +5,14 @@ Challenge Concepta is a model application with fluid animations, popular archite
 ## Maestro Demo
 
 
-
 https://user-images.githubusercontent.com/37419591/223822296-bc096166-7079-4093-a887-b1f072ad7025.mov
-
 
 
 ## Motivations
 
 I used patterns and libs that in my perception were most applicable to the demonstrated challenge that has multiple data sources and complex animations
 
-| Lib ou padrao | Aplicação do conceito                                                                                               |
+| Lib or pattern | Motivation                                                                                               |
 | ------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Clean Arch    | A popular way to organize applications with multiple data sources.                                                  |
 | Bloc          | A solution for generating predictable state-based animations with pure functions and interacting between components |
@@ -25,7 +23,7 @@ I used patterns and libs that in my perception were most applicable to the demon
 
 Even not having a wide variety of tests they provide great coverage of the code and ensuring quality.
 
-| Teste           | Aplicação do conceito                                                                         |
+| Tests           | Motivation                                                                        |
 | --------------- | --------------------------------------------------------------------------------------------- |
 | E2E             | I use maestro for black box testing                                                           |
 | Widget (custom) | I use internal utilities to create tests that have high code coverage even with few scenarios |
