@@ -6,7 +6,6 @@ import '../injection/injection.dart';
 
 final GetIt getIt = GetIt.instance;
 final List<CoreInjectionModule> modules = [
-  // DbModule(),
   SearchModule(),
   DetailsModule(),
 ];

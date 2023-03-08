@@ -4,6 +4,7 @@ import 'package:concepta/app/features/search/presentation/bloc/animation/animati
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../util/constants.dart';
 import 'seeds/builder/search_builder.dart';
 
 void main() {
@@ -93,10 +94,7 @@ void main() {
         await SearchSeeds().build(
           tester,
           localData: const SuggestionEntity(
-            suggestions: [
-              'entity_local',
-              'entity_local2',
-            ],
+            suggestions: localDataMocked,
           ),
         );
 
@@ -111,7 +109,7 @@ void main() {
 
         //assert
         expect(
-          find.text('entity_local'),
+          find.text(localItemDataMocked),
           findsOneWidget,
         );
       },
@@ -124,10 +122,7 @@ void main() {
         await SearchSeeds().build(
           tester,
           localData: const SuggestionEntity(
-            suggestions: [
-              'entity_local',
-              'entity_local2',
-            ],
+            suggestions: localDataMocked,
           ),
         );
 
@@ -142,13 +137,13 @@ void main() {
 
         await tester.enterText(
           find.byWidgetPredicate((widget) => widget is TextField),
-          "12",
+          inputIncompleteText,
         );
 
         await tester.pumpAndSettle();
         //assert
         expect(
-          find.text('entity_local'),
+          find.text(localItemDataMocked),
           findsOneWidget,
         );
       },
@@ -161,10 +156,7 @@ void main() {
         await SearchSeeds().build(
           tester,
           localData: const SuggestionEntity(
-            suggestions: [
-              'entity_local',
-              'entity_local2',
-            ],
+            suggestions: localDataMocked,
           ),
         );
 
@@ -179,19 +171,19 @@ void main() {
 
         await tester.enterText(
           find.byWidgetPredicate((widget) => widget is TextField),
-          "1234",
+          inputCompleteText,
         );
 
         await tester.pumpAndSettle();
 
         //assert
         expect(
-          find.text('entity_local'),
+          find.text(localItemDataMocked),
           findsNothing,
         );
 
         expect(
-          find.text('flutter_bloc'),
+          find.text(remoteItemDataMocked),
           findsOneWidget,
         );
       },
@@ -214,7 +206,7 @@ void main() {
 
         await tester.enterText(
           find.byWidgetPredicate((widget) => widget is TextField),
-          "1234",
+          inputCompleteText,
         );
 
         await tester.pumpAndSettle();

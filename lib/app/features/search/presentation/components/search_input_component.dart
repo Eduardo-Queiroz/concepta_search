@@ -71,15 +71,6 @@ class _SearchInputState extends State<SearchInputComponent> {
                     height: 45,
                     child: TextField(
                       controller: controller,
-                      decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.only(
-                          top: 10,
-                          bottom: 15,
-                          left: 24,
-                          right: 15,
-                        ),
-                        border: InputBorder.none,
-                      ),
                       showCursor: state.input.isEnable,
                       enabled: state.input.isEnable,
                       textInputAction: TextInputAction.next,
@@ -111,7 +102,7 @@ class _SearchInputState extends State<SearchInputComponent> {
                         child: AnimatedContainer(
                           duration: CoreDelay().easy,
                           height: state.cursor.height,
-                          child: CoreCursorFake(),
+                          child: const CoreCursorFake(),
                         ),
                       ),
                     ),

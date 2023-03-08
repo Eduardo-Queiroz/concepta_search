@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'app/features/details/infra/routes/details.dart';
 import 'app/features/search/infra/routes/search.dart';
 import 'app/shared/router.dart';
-import 'infra/router/route_bundle.dart';
 import 'theme/theme.dart';
 
 class App extends StatefulWidget {

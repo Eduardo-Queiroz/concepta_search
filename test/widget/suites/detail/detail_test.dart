@@ -1,5 +1,4 @@
 import 'package:concepta/app/features/details/infra/routes/details.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'seeds/builder/detail_builder.dart';

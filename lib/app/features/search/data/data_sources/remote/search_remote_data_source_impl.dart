@@ -17,8 +17,12 @@ class SearchRemoteDataSourceImpl implements SearchRemoteDataSource {
 
       return Right(
         SuggestionEntity(
-          suggestions:
-              data.packages.map((package) => package.package).take(6).toList(),
+          suggestions: data.packages
+              .map(
+                (package) => package.package,
+              )
+              .take(6)
+              .toList(),
         ),
       );
     } on Exception catch (exception) {

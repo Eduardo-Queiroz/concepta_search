@@ -29,9 +29,7 @@ class SearchSuggestionCubit extends Cubit<SearchSuggestionState> {
     );
   }
 
-  void inputValue(
-    String inputValue,
-  ) {
+  void inputValue(String inputValue) {
     if (inputValue.length == 3) {
       getSuggestion(query: inputValue);
     } else if (inputValue.length > 3) {
@@ -42,9 +40,7 @@ class SearchSuggestionCubit extends Cubit<SearchSuggestionState> {
     }
   }
 
-  void selectSuggestion({
-    required String name,
-  }) =>
+  void selectSuggestion({required String name}) =>
       searchRepository.selectSuggestion(name: name);
 
   void inputClear() {

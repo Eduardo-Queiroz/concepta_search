@@ -2,6 +2,8 @@ import 'package:mocktail/mocktail.dart';
 import 'package:pubspec/src/pubspec.dart';
 import 'package:pub_api_client/pub_api_client.dart';
 
+import '../../util/constants.dart';
+
 class PubClientMock extends Mock implements PubClient {
   @override
   Future<SearchResults> search(
@@ -13,7 +15,7 @@ class PubClientMock extends Mock implements PubClient {
   }) async =>
       SearchResults(
         packages: [
-          PackageResult(package: "flutter_bloc"),
+          PackageResult(package: remoteItemDataMocked),
           PackageResult(package: "entity_remote1"),
           PackageResult(package: "entity_remote2"),
           PackageResult(package: "entity_remote3"),

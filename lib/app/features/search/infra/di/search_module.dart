@@ -50,7 +50,7 @@ class SearchModule implements CoreInjectionModule {
     );
 
     injector.factory.inject<SearchScreen>(
-      dependency: SearchScreen(),
+      dependency: const SearchScreen(),
     );
   }
 }

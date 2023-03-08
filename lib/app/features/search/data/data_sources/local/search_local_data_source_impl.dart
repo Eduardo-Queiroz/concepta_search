@@ -20,6 +20,7 @@ class SearchLocalDataSourceImpl implements SearchLocalDataSource {
     }
   }
 
+  @override
   Either<Exception, void> updateHistory({
     required SuggestionEntity suggestion,
   }) {

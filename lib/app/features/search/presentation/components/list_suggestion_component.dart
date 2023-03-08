@@ -47,7 +47,7 @@ class ListSuggestionComponent extends StatelessWidget {
                     children: [
                       Visibility(
                         visible: !(!state.hasTitle && index == 0),
-                        child: CoreDivider(),
+                        child: const CoreDivider(),
                       ),
                       InkWell(
                         onTap: () {

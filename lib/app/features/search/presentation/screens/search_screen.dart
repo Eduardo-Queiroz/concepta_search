@@ -9,6 +9,8 @@ import '../bloc/animation/animation_cubit.dart';
 import '../components/list_suggestion_component.dart';
 
 class SearchScreen extends StatelessWidget {
+  const SearchScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

@@ -4,7 +4,7 @@ enum CorePageTransitionType {
   /// Fade Animation
   fade,
 
-  /// Right to left with fading animation
+  /// Wave Animation
   wave,
 }
 

@@ -55,7 +55,7 @@ class SearchInputShimmer extends StatelessWidget {
               width: getRandomWidth(),
             ),
           ),
-          CoreDivider(),
+          const CoreDivider(),
           CoreContainer(
             padding: const CoreSpacing(
               vertical: CoreSpacingType.spacing150,
@@ -68,7 +68,7 @@ class SearchInputShimmer extends StatelessWidget {
               width: getRandomWidth(),
             ),
           ),
-          CoreDivider(),
+          const CoreDivider(),
           CoreContainer(
             padding: const CoreSpacing(
               vertical: CoreSpacingType.spacing150,
@@ -81,7 +81,7 @@ class SearchInputShimmer extends StatelessWidget {
               width: getRandomWidth(),
             ),
           ),
-          CoreDivider(),
+          const CoreDivider(),
           CoreContainer(
             padding: const CoreSpacing(
               vertical: CoreSpacingType.spacing150,
